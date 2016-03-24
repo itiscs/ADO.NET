@@ -157,5 +157,17 @@ namespace WindowsFormsApplication14
 
             con.Close();
          }
+
+        private void вариант1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Zadacha1_v1 z1 = new Zadacha1_v1();
+            z1.ShowDialog();
+        }
+
+        private void вариант2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Zadacha1_v2 z1 = new Zadacha1_v2();
+            z1.ShowDialog();
+        }
     }
 }

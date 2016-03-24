@@ -75,6 +75,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.формыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.альтернативнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.задача1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вариант1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вариант2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.txtTovar = new System.Windows.Forms.TextBox();
             this.lblResult = new System.Windows.Forms.Label();
@@ -143,7 +146,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(815, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(796, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -439,10 +442,11 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.формыToolStripMenuItem});
+            this.формыToolStripMenuItem,
+            this.задача1ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(815, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(796, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -460,6 +464,29 @@
             this.альтернативнаяToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.альтернативнаяToolStripMenuItem.Text = "Альтернативная";
             this.альтернативнаяToolStripMenuItem.Click += new System.EventHandler(this.альтернативнаяToolStripMenuItem_Click);
+            // 
+            // задача1ToolStripMenuItem
+            // 
+            this.задача1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вариант1ToolStripMenuItem,
+            this.вариант2ToolStripMenuItem});
+            this.задача1ToolStripMenuItem.Name = "задача1ToolStripMenuItem";
+            this.задача1ToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.задача1ToolStripMenuItem.Text = "Задача 1";
+            // 
+            // вариант1ToolStripMenuItem
+            // 
+            this.вариант1ToolStripMenuItem.Name = "вариант1ToolStripMenuItem";
+            this.вариант1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.вариант1ToolStripMenuItem.Text = "Вариант 1";
+            this.вариант1ToolStripMenuItem.Click += new System.EventHandler(this.вариант1ToolStripMenuItem_Click);
+            // 
+            // вариант2ToolStripMenuItem
+            // 
+            this.вариант2ToolStripMenuItem.Name = "вариант2ToolStripMenuItem";
+            this.вариант2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.вариант2ToolStripMenuItem.Text = "Вариант 2";
+            this.вариант2ToolStripMenuItem.Click += new System.EventHandler(this.вариант2ToolStripMenuItem_Click);
             // 
             // button1
             // 
@@ -491,7 +518,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 434);
+            this.ClientSize = new System.Drawing.Size(796, 434);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.txtTovar);
             this.Controls.Add(this.button1);
@@ -576,6 +603,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtTovar;
         private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.ToolStripMenuItem задача1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вариант1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вариант2ToolStripMenuItem;
     }
 }
 
