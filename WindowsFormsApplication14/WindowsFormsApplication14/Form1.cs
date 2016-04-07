@@ -55,9 +55,7 @@ namespace WindowsFormsApplication14
             row = dgvRasxod.CurrentCell.RowIndex;
             rowCount = dgvRasxod.RowCount;
 
-            if (row >= rowCount - 1)
-                ;//btnNext.Enabled = false;
-            else
+            if (row < rowCount - 1)
                 dgvRasxod.CurrentCell =
                     dgvRasxod[col, row + 1];
         }
@@ -68,9 +66,7 @@ namespace WindowsFormsApplication14
             col = dgvRasxod.CurrentCell.ColumnIndex;
             row = dgvRasxod.CurrentCell.RowIndex;
 
-            if (row <= 0)
-                ;//btnPrev.Enabled = false;
-            else
+            if (row > 0)
                 dgvRasxod.CurrentCell =
                     dgvRasxod[col, row - 1];
         }
@@ -168,6 +164,19 @@ namespace WindowsFormsApplication14
         {
             Zadacha1_v2 z1 = new Zadacha1_v2();
             z1.ShowDialog();
+        }
+
+        private void задача1ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormReport1 fr1 = new FormReport1();
+            fr1.ShowDialog();
+        }
+
+        private void задача2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormReport2 fr2 = new FormReport2();
+            fr2.ShowDialog();
+
         }
     }
 }

@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +60,18 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReport1.Designer.cs">
+      <DependentUpon>FormReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReport2.Designer.cs">
+      <DependentUpon>FormReport2.cs</DependentUpon>
     </Compile>
     <Compile Include="myBaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -89,6 +104,12 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReport1.resx">
+      <DependentUpon>FormReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport2.resx">
+      <DependentUpon>FormReport2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NavigForm.resx">
       <DependentUpon>NavigForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +122,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportZadacha1.rdlc" />
+    <EmbeddedResource Include="ReportZadacha2.rdlc" />
     <EmbeddedResource Include="Zadacha1_v1.resx">
       <DependentUpon>Zadacha1_v1.cs</DependentUpon>
     </EmbeddedResource>
