@@ -73,6 +73,12 @@
     <Compile Include="FormReport2.Designer.cs">
       <DependentUpon>FormReport2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearch.Designer.cs">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="myBaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -110,6 +116,9 @@
     <EmbeddedResource Include="FormReport2.resx">
       <DependentUpon>FormReport2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSearch.resx">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NavigForm.resx">
       <DependentUpon>NavigForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +131,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="ReportZadacha1.rdlc" />
     <EmbeddedResource Include="ReportZadacha2.rdlc" />
     <EmbeddedResource Include="Zadacha1_v1.resx">

@@ -178,5 +178,11 @@ namespace WindowsFormsApplication14
             fr2.ShowDialog();
 
         }
+
+        private void поискToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSearch fs = new FormSearch();
+            fs.ShowDialog();
+        }
     }
 }
