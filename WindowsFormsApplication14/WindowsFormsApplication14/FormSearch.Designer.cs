@@ -44,6 +44,7 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.txtName = new System.Windows.Forms.TextBox();
             this.tOVARYTableAdapter = new WindowsFormsApplication14.myBaseDataSetTableAdapters.TOVARYTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,7 +70,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnName = new System.Windows.Forms.Button();
             this.btnEdizm = new System.Windows.Forms.Button();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.lblNotFound = new System.Windows.Forms.Label();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.btnImage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tOVARYBindingSource)).BeginInit();
@@ -204,6 +207,16 @@
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // txtName
             // 
@@ -382,9 +395,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(420, 35);
+            this.pictureBox1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.tOVARYBindingSource, "PICTURE", true));
+            this.pictureBox1.Location = new System.Drawing.Point(432, 35);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 121);
+            this.pictureBox1.Size = new System.Drawing.Size(203, 148);
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
@@ -408,21 +422,37 @@
             this.btnEdizm.UseVisualStyleBackColor = true;
             this.btnEdizm.Click += new System.EventHandler(this.btnEdizm_Click);
             // 
-            // toolStripButton1
+            // lblNotFound
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.lblNotFound.AutoSize = true;
+            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblNotFound.ForeColor = System.Drawing.Color.Red;
+            this.lblNotFound.Location = new System.Drawing.Point(127, 170);
+            this.lblNotFound.Name = "lblNotFound";
+            this.lblNotFound.Size = new System.Drawing.Size(0, 13);
+            this.lblNotFound.TabIndex = 21;
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
+            // 
+            // btnImage
+            // 
+            this.btnImage.Location = new System.Drawing.Point(666, 33);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(75, 50);
+            this.btnImage.TabIndex = 22;
+            this.btnImage.Text = "Загрузить рисунок";
+            this.btnImage.UseVisualStyleBackColor = true;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // FormSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 443);
+            this.Controls.Add(this.btnImage);
+            this.Controls.Add(this.lblNotFound);
             this.Controls.Add(this.btnEdizm);
             this.Controls.Add(this.btnName);
             this.Controls.Add(this.pictureBox1);
@@ -497,5 +527,8 @@
         private System.Windows.Forms.Button btnName;
         private System.Windows.Forms.Button btnEdizm;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.Label lblNotFound;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.Button btnImage;
     }
 }

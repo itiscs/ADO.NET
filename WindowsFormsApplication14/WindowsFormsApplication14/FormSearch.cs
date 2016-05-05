@@ -36,15 +36,16 @@ namespace WindowsFormsApplication14
         {
             try
             {
+                lblNotFound.Text = "";
                 int index = tOVARYBindingSource.Find("KOD_TOVAR", Convert.ToInt32(txtKod.Text));
                 if (index < 0)
-                    txtKod.Text = "Не найден";
+                    lblNotFound.Text = "Не найден"; 
                 else
                     tOVARYBindingSource.Position = index;
             }
             catch
             {
-                txtKod.Text = "Не найден";
+                lblNotFound.Text = "Не найден"; 
             }
         }
 
@@ -52,15 +53,16 @@ namespace WindowsFormsApplication14
         {
             try
             {
+                lblNotFound.Text = "";
                 int index = tOVARYBindingSource.Find("TOVAR", txtName.Text);
                 if (index < 0)
-                    txtName.Text = "Не найден";
+                    lblNotFound.Text = "Не найден";
                 else
                     tOVARYBindingSource.Position = index;
             }
             catch
             {
-                txtName.Text = "Не найден";
+                lblNotFound.Text = "Не найден";
             }
 
         }
@@ -73,13 +75,17 @@ namespace WindowsFormsApplication14
                 if (index < 0)
                 {
                     tOVARYBindingSource.Position = -1;
-                    txtEdizm.Text = "Не найден";                }
+                    lblNotFound.Text = "Не найден";
+                }
                 else
+                {
                     tOVARYBindingSource.Position = index;
+                    lblNotFound.Text = "";
+                }
             }
             catch
             {
-                txtEdizm.Text = "Не найден";
+                lblNotFound.Text = "Не найден";
             }
 
         }
@@ -87,11 +93,21 @@ namespace WindowsFormsApplication14
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             tOVARYBindingSource.EndEdit();
+            tOVARYTableAdapter.Update(myBaseDataSet.TOVARY);
         }
 
         private void txtCount_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnImage_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
         }
     }
 }
