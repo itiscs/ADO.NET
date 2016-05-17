@@ -13,6 +13,10 @@ namespace WindowsFormsApplication14
 {
     public partial class FormSearch : Form
     {
+        // на форме элементы TextBox и PictureBox настроены через 
+        // DataBindings - Advanced. 
+        // dataGridView1 настроен на master-detal через внешний ключ 
+
         public FormSearch()
         {
             InitializeComponent();
@@ -37,11 +41,15 @@ namespace WindowsFormsApplication14
             try
             {
                 lblNotFound.Text = "";
+                //ищем номер записи по коду товара из txtKod
                 int index = tOVARYBindingSource.Find("KOD_TOVAR", Convert.ToInt32(txtKod.Text));
                 if (index < 0)
                     lblNotFound.Text = "Не найден"; 
                 else
+                {
                     tOVARYBindingSource.Position = index;
+                    lblNotFound.Text = "";
+                }
             }
             catch
             {
@@ -54,11 +62,15 @@ namespace WindowsFormsApplication14
             try
             {
                 lblNotFound.Text = "";
+                //ищем номер записи по наименованию товара из txtName
                 int index = tOVARYBindingSource.Find("TOVAR", txtName.Text);
                 if (index < 0)
                     lblNotFound.Text = "Не найден";
                 else
+                {
                     tOVARYBindingSource.Position = index;
+                    lblNotFound.Text = "";
+                }
             }
             catch
             {
@@ -71,10 +83,10 @@ namespace WindowsFormsApplication14
         {
             try
             {
+                //ищем номер первой записи по единице измерения из txtEdizm
                 int index = tOVARYBindingSource.Find("ED_IZM", txtEdizm.Text);
                 if (index < 0)
                 {
-                    tOVARYBindingSource.Position = -1;
                     lblNotFound.Text = "Не найден";
                 }
                 else
@@ -92,6 +104,7 @@ namespace WindowsFormsApplication14
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            //обновление данных в БД
             tOVARYBindingSource.EndEdit();
             tOVARYTableAdapter.Update(myBaseDataSet.TOVARY);
         }
@@ -103,6 +116,7 @@ namespace WindowsFormsApplication14
 
         private void btnImage_Click(object sender, EventArgs e)
         {
+            // загружаем в pictureBox картинку из диалога открытия файла
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Image = Image.FromFile(openFileDialog.FileName);

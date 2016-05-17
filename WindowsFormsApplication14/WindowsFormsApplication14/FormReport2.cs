@@ -19,6 +19,8 @@ namespace WindowsFormsApplication14
 
         private void FormReport2_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "myBaseDataSet.RasxodDoc". При необходимости она может быть перемещена или удалена.
+            this.RasxodDocTableAdapter.Fill(this.myBaseDataSet.RasxodDoc);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "myBaseDataSet.Zadacha2". При необходимости она может быть перемещена или удалена.
             this.Zadacha2TableAdapter.Fill(this.myBaseDataSet.Zadacha2);
 

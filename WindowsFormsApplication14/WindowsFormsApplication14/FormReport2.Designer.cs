@@ -30,13 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.myBaseDataSet = new WindowsFormsApplication14.myBaseDataSet();
             this.Zadacha2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.myBaseDataSet = new WindowsFormsApplication14.myBaseDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Zadacha2TableAdapter = new WindowsFormsApplication14.myBaseDataSetTableAdapters.Zadacha2TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.myBaseDataSet)).BeginInit();
+            this.RasxodDocBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.RasxodDocTableAdapter = new WindowsFormsApplication14.myBaseDataSetTableAdapters.RasxodDocTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.Zadacha2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myBaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RasxodDocBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Zadacha2BindingSource
+            // 
+            this.Zadacha2BindingSource.DataMember = "Zadacha2";
+            this.Zadacha2BindingSource.DataSource = this.myBaseDataSet;
+            // 
+            // myBaseDataSet
+            // 
+            this.myBaseDataSet.DataSetName = "myBaseDataSet";
+            this.myBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -44,39 +57,39 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.Zadacha2BindingSource;
+            reportDataSource1.Value = this.RasxodDocBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApplication14.ReportZadacha2.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApplication14.Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 1);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(783, 352);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // myBaseDataSet
-            // 
-            this.myBaseDataSet.DataSetName = "myBaseDataSet";
-            this.myBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Zadacha2BindingSource
-            // 
-            this.Zadacha2BindingSource.DataMember = "Zadacha2";
-            this.Zadacha2BindingSource.DataSource = this.myBaseDataSet;
             // 
             // Zadacha2TableAdapter
             // 
             this.Zadacha2TableAdapter.ClearBeforeFill = true;
             // 
+            // RasxodDocBindingSource
+            // 
+            this.RasxodDocBindingSource.DataMember = "RasxodDoc";
+            this.RasxodDocBindingSource.DataSource = this.myBaseDataSet;
+            // 
+            // RasxodDocTableAdapter
+            // 
+            this.RasxodDocTableAdapter.ClearBeforeFill = true;
+            // 
             // FormReport2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 252);
+            this.ClientSize = new System.Drawing.Size(793, 358);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FormReport2";
             this.Text = "FormReport2";
             this.Load += new System.EventHandler(this.FormReport2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.myBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Zadacha2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myBaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RasxodDocBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -87,5 +100,7 @@
         private System.Windows.Forms.BindingSource Zadacha2BindingSource;
         private myBaseDataSet myBaseDataSet;
         private myBaseDataSetTableAdapters.Zadacha2TableAdapter Zadacha2TableAdapter;
+        private System.Windows.Forms.BindingSource RasxodDocBindingSource;
+        private myBaseDataSetTableAdapters.RasxodDocTableAdapter RasxodDocTableAdapter;
     }
 }

@@ -57,11 +57,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dATARASHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kOLVODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTOIMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kODPOKUPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.POKUP = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.pOKUPATELIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tOVRASHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rASXODTableAdapter = new WindowsFormsApplication14.myBaseDataSetTableAdapters.RASXODTableAdapter();
@@ -73,6 +68,11 @@
             this.lblNotFound = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.btnImage = new System.Windows.Forms.Button();
+            this.POKUP = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.kODRASHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATARASHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kOLVODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTOIMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tOVARYBindingSource)).BeginInit();
@@ -313,57 +313,16 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.POKUP,
+            this.kODRASHDataGridViewTextBoxColumn,
             this.dATARASHDataGridViewTextBoxColumn,
             this.kOLVODataGridViewTextBoxColumn,
-            this.sTOIMDataGridViewTextBoxColumn,
-            this.kODPOKUPDataGridViewTextBoxColumn,
-            this.POKUP});
+            this.sTOIMDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tOVRASHBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(44, 198);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 208);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(674, 149);
+            this.dataGridView1.Size = new System.Drawing.Size(591, 149);
             this.dataGridView1.TabIndex = 16;
-            // 
-            // dATARASHDataGridViewTextBoxColumn
-            // 
-            this.dATARASHDataGridViewTextBoxColumn.DataPropertyName = "DATA_RASH";
-            this.dATARASHDataGridViewTextBoxColumn.Frozen = true;
-            this.dATARASHDataGridViewTextBoxColumn.HeaderText = "DATA_RASH";
-            this.dATARASHDataGridViewTextBoxColumn.Name = "dATARASHDataGridViewTextBoxColumn";
-            // 
-            // kOLVODataGridViewTextBoxColumn
-            // 
-            this.kOLVODataGridViewTextBoxColumn.DataPropertyName = "KOLVO";
-            this.kOLVODataGridViewTextBoxColumn.Frozen = true;
-            this.kOLVODataGridViewTextBoxColumn.HeaderText = "KOLVO";
-            this.kOLVODataGridViewTextBoxColumn.Name = "kOLVODataGridViewTextBoxColumn";
-            // 
-            // sTOIMDataGridViewTextBoxColumn
-            // 
-            this.sTOIMDataGridViewTextBoxColumn.DataPropertyName = "STOIM";
-            this.sTOIMDataGridViewTextBoxColumn.Frozen = true;
-            this.sTOIMDataGridViewTextBoxColumn.HeaderText = "STOIM";
-            this.sTOIMDataGridViewTextBoxColumn.Name = "sTOIMDataGridViewTextBoxColumn";
-            // 
-            // kODPOKUPDataGridViewTextBoxColumn
-            // 
-            this.kODPOKUPDataGridViewTextBoxColumn.DataPropertyName = "KOD_POKUP";
-            this.kODPOKUPDataGridViewTextBoxColumn.Frozen = true;
-            this.kODPOKUPDataGridViewTextBoxColumn.HeaderText = "KOD_POKUP";
-            this.kODPOKUPDataGridViewTextBoxColumn.Name = "kODPOKUPDataGridViewTextBoxColumn";
-            // 
-            // POKUP
-            // 
-            this.POKUP.DataPropertyName = "KOD_POKUP";
-            this.POKUP.DataSource = this.pOKUPATELIBindingSource;
-            this.POKUP.DisplayMember = "POKUP";
-            this.POKUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.POKUP.HeaderText = "Покупатель";
-            this.POKUP.Name = "POKUP";
-            this.POKUP.ReadOnly = true;
-            this.POKUP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.POKUP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.POKUP.ValueMember = "KOD_POKUP";
             // 
             // pOKUPATELIBindingSource
             // 
@@ -399,6 +358,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(432, 35);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(203, 148);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
@@ -445,6 +405,44 @@
             this.btnImage.Text = "Загрузить рисунок";
             this.btnImage.UseVisualStyleBackColor = true;
             this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            // 
+            // POKUP
+            // 
+            this.POKUP.DataPropertyName = "KOD_POKUP";
+            this.POKUP.DataSource = this.pOKUPATELIBindingSource;
+            this.POKUP.DisplayMember = "POKUP";
+            this.POKUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.POKUP.HeaderText = "Покупатель";
+            this.POKUP.Name = "POKUP";
+            this.POKUP.ReadOnly = true;
+            this.POKUP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.POKUP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.POKUP.ValueMember = "KOD_POKUP";
+            // 
+            // kODRASHDataGridViewTextBoxColumn
+            // 
+            this.kODRASHDataGridViewTextBoxColumn.DataPropertyName = "KOD_RASH";
+            this.kODRASHDataGridViewTextBoxColumn.HeaderText = "KOD_RASH";
+            this.kODRASHDataGridViewTextBoxColumn.Name = "kODRASHDataGridViewTextBoxColumn";
+            this.kODRASHDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dATARASHDataGridViewTextBoxColumn
+            // 
+            this.dATARASHDataGridViewTextBoxColumn.DataPropertyName = "DATA_RASH";
+            this.dATARASHDataGridViewTextBoxColumn.HeaderText = "DATA_RASH";
+            this.dATARASHDataGridViewTextBoxColumn.Name = "dATARASHDataGridViewTextBoxColumn";
+            // 
+            // kOLVODataGridViewTextBoxColumn
+            // 
+            this.kOLVODataGridViewTextBoxColumn.DataPropertyName = "KOLVO";
+            this.kOLVODataGridViewTextBoxColumn.HeaderText = "KOLVO";
+            this.kOLVODataGridViewTextBoxColumn.Name = "kOLVODataGridViewTextBoxColumn";
+            // 
+            // sTOIMDataGridViewTextBoxColumn
+            // 
+            this.sTOIMDataGridViewTextBoxColumn.DataPropertyName = "STOIM";
+            this.sTOIMDataGridViewTextBoxColumn.HeaderText = "STOIM";
+            this.sTOIMDataGridViewTextBoxColumn.Name = "sTOIMDataGridViewTextBoxColumn";
             // 
             // FormSearch
             // 
@@ -517,11 +515,6 @@
         private myBaseDataSetTableAdapters.RASXODTableAdapter rASXODTableAdapter;
         private System.Windows.Forms.BindingSource pOKUPATELIBindingSource;
         private myBaseDataSetTableAdapters.POKUPATELITableAdapter pOKUPATELITableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dATARASHDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kOLVODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sTOIMDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kODPOKUPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn POKUP;
         private System.Windows.Forms.Button btnKod;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnName;
@@ -530,5 +523,10 @@
         private System.Windows.Forms.Label lblNotFound;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button btnImage;
+        private System.Windows.Forms.DataGridViewComboBoxColumn POKUP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kODRASHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATARASHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kOLVODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTOIMDataGridViewTextBoxColumn;
     }
 }

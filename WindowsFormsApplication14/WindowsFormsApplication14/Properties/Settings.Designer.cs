@@ -32,5 +32,25 @@ namespace WindowsFormsApplication14.Properties {
                 return ((string)(this["myBaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\v11.0;Initial Catalog=Locations;Integrated Security=True")]
+        public string LocationsConnectionString {
+            get {
+                return ((string)(this["LocationsConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\v11.0;Initial Catalog=Location;Integrated Security=True")]
+        public string LocationConnectionString {
+            get {
+                return ((string)(this["LocationConnectionString"]));
+            }
+        }
     }
 }

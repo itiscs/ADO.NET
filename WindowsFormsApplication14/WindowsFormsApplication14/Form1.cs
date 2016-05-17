@@ -184,5 +184,16 @@ namespace WindowsFormsApplication14
             FormSearch fs = new FormSearch();
             fs.ShowDialog();
         }
+
+        private void трёхуровневыйToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormReport2 f2 = new FormReport2();
+            f2.ShowDialog();
+        }
+
+        private void деревоToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

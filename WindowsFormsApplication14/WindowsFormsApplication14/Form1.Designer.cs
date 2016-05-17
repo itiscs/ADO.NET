@@ -82,10 +82,12 @@
             this.задача1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.задача2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.задача3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.трёхуровневыйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.txtTovar = new System.Windows.Forms.TextBox();
             this.lblResult = new System.Windows.Forms.Label();
-            this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.myBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tOVARYBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -116,6 +118,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.LocationTableAdapter = null;
             this.tableAdapterManager.POKUPATELITableAdapter = this.pOKUPATELITableAdapter;
             this.tableAdapterManager.RASXODTableAdapter = null;
             this.tableAdapterManager.TOVARYTableAdapter = this.tOVARYTableAdapter;
@@ -450,7 +453,8 @@
             this.формыToolStripMenuItem,
             this.задача1ToolStripMenuItem,
             this.отчётыToolStripMenuItem,
-            this.поискToolStripMenuItem});
+            this.поискToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(796, 24);
@@ -500,7 +504,8 @@
             this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.задача1ToolStripMenuItem1,
             this.задача2ToolStripMenuItem,
-            this.задача3ToolStripMenuItem});
+            this.задача3ToolStripMenuItem,
+            this.трёхуровневыйToolStripMenuItem});
             this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
             this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.отчётыToolStripMenuItem.Text = "Отчёты";
@@ -508,22 +513,41 @@
             // задача1ToolStripMenuItem1
             // 
             this.задача1ToolStripMenuItem1.Name = "задача1ToolStripMenuItem1";
-            this.задача1ToolStripMenuItem1.Size = new System.Drawing.Size(121, 22);
+            this.задача1ToolStripMenuItem1.Size = new System.Drawing.Size(160, 22);
             this.задача1ToolStripMenuItem1.Text = "Задача 1";
             this.задача1ToolStripMenuItem1.Click += new System.EventHandler(this.задача1ToolStripMenuItem1_Click);
             // 
             // задача2ToolStripMenuItem
             // 
             this.задача2ToolStripMenuItem.Name = "задача2ToolStripMenuItem";
-            this.задача2ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.задача2ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.задача2ToolStripMenuItem.Text = "Задача 2";
             this.задача2ToolStripMenuItem.Click += new System.EventHandler(this.задача2ToolStripMenuItem_Click);
             // 
             // задача3ToolStripMenuItem
             // 
             this.задача3ToolStripMenuItem.Name = "задача3ToolStripMenuItem";
-            this.задача3ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.задача3ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.задача3ToolStripMenuItem.Text = "Задача 3";
+            // 
+            // трёхуровневыйToolStripMenuItem
+            // 
+            this.трёхуровневыйToolStripMenuItem.Name = "трёхуровневыйToolStripMenuItem";
+            this.трёхуровневыйToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.трёхуровневыйToolStripMenuItem.Text = "Трёхуровневый";
+            this.трёхуровневыйToolStripMenuItem.Click += new System.EventHandler(this.трёхуровневыйToolStripMenuItem_Click);
+            // 
+            // поискToolStripMenuItem
+            // 
+            this.поискToolStripMenuItem.Name = "поискToolStripMenuItem";
+            this.поискToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.поискToolStripMenuItem.Text = "Поиск";
+            this.поискToolStripMenuItem.Click += new System.EventHandler(this.поискToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
             // 
             // button1
             // 
@@ -550,13 +574,6 @@
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(0, 13);
             this.lblResult.TabIndex = 11;
-            // 
-            // поискToolStripMenuItem
-            // 
-            this.поискToolStripMenuItem.Name = "поискToolStripMenuItem";
-            this.поискToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.поискToolStripMenuItem.Text = "Поиск";
-            this.поискToolStripMenuItem.Click += new System.EventHandler(this.поискToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -655,6 +672,8 @@
         private System.Windows.Forms.ToolStripMenuItem задача2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem задача3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поискToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem трёхуровневыйToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 
