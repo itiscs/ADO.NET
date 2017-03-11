@@ -45,6 +45,10 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dgvPokup = new System.Windows.Forms.DataGridView();
+            this.pOKUPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gORODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aDRESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTovar = new System.Windows.Forms.DataGridView();
             this.kODTOVARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tOVARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,22 +57,20 @@
             this.cOUNTTOVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tOVARYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvRasxod = new System.Windows.Forms.DataGridView();
-            this.tOVRASHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pOKUPATELITableAdapter = new ADO_2017.myBaseDataSetTableAdapters.POKUPATELITableAdapter();
-            this.tOVARYTableAdapter = new ADO_2017.myBaseDataSetTableAdapters.TOVARYTableAdapter();
-            this.rASXODBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rASXODTableAdapter = new ADO_2017.myBaseDataSetTableAdapters.RASXODTableAdapter();
-            this.pOKRASHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kODRASHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATARASHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tovar = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.POKUP = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.kOLVODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sTOIMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pOKUPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gORODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aDRESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rASXODBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tOVRASHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pOKUPATELITableAdapter = new ADO_2017.myBaseDataSetTableAdapters.POKUPATELITableAdapter();
+            this.tOVARYTableAdapter = new ADO_2017.myBaseDataSetTableAdapters.TOVARYTableAdapter();
+            this.rASXODTableAdapter = new ADO_2017.myBaseDataSetTableAdapters.RASXODTableAdapter();
+            this.pOKRASHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnProc = new System.Windows.Forms.Button();
+            this.lblResult = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pOKUPATELIBindingSource)).BeginInit();
@@ -77,8 +79,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTovar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tOVARYBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRasxod)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tOVRASHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rASXODBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tOVRASHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pOKRASHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -222,6 +224,30 @@
             this.dgvPokup.TabIndex = 1;
             this.dgvPokup.Click += new System.EventHandler(this.dgvPokup_Click);
             // 
+            // pOKUPDataGridViewTextBoxColumn
+            // 
+            this.pOKUPDataGridViewTextBoxColumn.DataPropertyName = "POKUP";
+            this.pOKUPDataGridViewTextBoxColumn.HeaderText = "Покупатель";
+            this.pOKUPDataGridViewTextBoxColumn.Name = "pOKUPDataGridViewTextBoxColumn";
+            // 
+            // gORODDataGridViewTextBoxColumn
+            // 
+            this.gORODDataGridViewTextBoxColumn.DataPropertyName = "GOROD";
+            this.gORODDataGridViewTextBoxColumn.HeaderText = "Город";
+            this.gORODDataGridViewTextBoxColumn.Name = "gORODDataGridViewTextBoxColumn";
+            // 
+            // aDRESDataGridViewTextBoxColumn
+            // 
+            this.aDRESDataGridViewTextBoxColumn.DataPropertyName = "ADRES";
+            this.aDRESDataGridViewTextBoxColumn.HeaderText = "Адрес";
+            this.aDRESDataGridViewTextBoxColumn.Name = "aDRESDataGridViewTextBoxColumn";
+            // 
+            // tELDataGridViewTextBoxColumn
+            // 
+            this.tELDataGridViewTextBoxColumn.DataPropertyName = "TEL";
+            this.tELDataGridViewTextBoxColumn.HeaderText = "Телефон";
+            this.tELDataGridViewTextBoxColumn.Name = "tELDataGridViewTextBoxColumn";
+            // 
             // dgvTovar
             // 
             this.dgvTovar.AutoGenerateColumns = false;
@@ -237,6 +263,7 @@
             this.dgvTovar.Name = "dgvTovar";
             this.dgvTovar.Size = new System.Drawing.Size(603, 127);
             this.dgvTovar.TabIndex = 2;
+            this.dgvTovar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTovar_CellContentClick);
             this.dgvTovar.Click += new System.EventHandler(this.dgvTovar_Click);
             // 
             // kODTOVARDataGridViewTextBoxColumn
@@ -293,33 +320,6 @@
             this.dgvRasxod.TabIndex = 3;
             this.dgvRasxod.Click += new System.EventHandler(this.dgvRasxod_Click);
             // 
-            // tOVRASHBindingSource
-            // 
-            this.tOVRASHBindingSource.DataMember = "TOV_RASH";
-            this.tOVRASHBindingSource.DataSource = this.tOVARYBindingSource;
-            // 
-            // pOKUPATELITableAdapter
-            // 
-            this.pOKUPATELITableAdapter.ClearBeforeFill = true;
-            // 
-            // tOVARYTableAdapter
-            // 
-            this.tOVARYTableAdapter.ClearBeforeFill = true;
-            // 
-            // rASXODBindingSource
-            // 
-            this.rASXODBindingSource.DataMember = "RASXOD";
-            this.rASXODBindingSource.DataSource = this.myBaseDataSet;
-            // 
-            // rASXODTableAdapter
-            // 
-            this.rASXODTableAdapter.ClearBeforeFill = true;
-            // 
-            // pOKRASHBindingSource
-            // 
-            this.pOKRASHBindingSource.DataMember = "POK_RASH";
-            this.pOKRASHBindingSource.DataSource = this.pOKUPATELIBindingSource;
-            // 
             // kODRASHDataGridViewTextBoxColumn
             // 
             this.kODRASHDataGridViewTextBoxColumn.DataPropertyName = "KOD_RASH";
@@ -365,35 +365,60 @@
             this.sTOIMDataGridViewTextBoxColumn.HeaderText = "STOIM";
             this.sTOIMDataGridViewTextBoxColumn.Name = "sTOIMDataGridViewTextBoxColumn";
             // 
-            // pOKUPDataGridViewTextBoxColumn
+            // rASXODBindingSource
             // 
-            this.pOKUPDataGridViewTextBoxColumn.DataPropertyName = "POKUP";
-            this.pOKUPDataGridViewTextBoxColumn.HeaderText = "Покупатель";
-            this.pOKUPDataGridViewTextBoxColumn.Name = "pOKUPDataGridViewTextBoxColumn";
+            this.rASXODBindingSource.DataMember = "RASXOD";
+            this.rASXODBindingSource.DataSource = this.myBaseDataSet;
             // 
-            // gORODDataGridViewTextBoxColumn
+            // tOVRASHBindingSource
             // 
-            this.gORODDataGridViewTextBoxColumn.DataPropertyName = "GOROD";
-            this.gORODDataGridViewTextBoxColumn.HeaderText = "Город";
-            this.gORODDataGridViewTextBoxColumn.Name = "gORODDataGridViewTextBoxColumn";
+            this.tOVRASHBindingSource.DataMember = "TOV_RASH";
+            this.tOVRASHBindingSource.DataSource = this.tOVARYBindingSource;
             // 
-            // aDRESDataGridViewTextBoxColumn
+            // pOKUPATELITableAdapter
             // 
-            this.aDRESDataGridViewTextBoxColumn.DataPropertyName = "ADRES";
-            this.aDRESDataGridViewTextBoxColumn.HeaderText = "Адрес";
-            this.aDRESDataGridViewTextBoxColumn.Name = "aDRESDataGridViewTextBoxColumn";
+            this.pOKUPATELITableAdapter.ClearBeforeFill = true;
             // 
-            // tELDataGridViewTextBoxColumn
+            // tOVARYTableAdapter
             // 
-            this.tELDataGridViewTextBoxColumn.DataPropertyName = "TEL";
-            this.tELDataGridViewTextBoxColumn.HeaderText = "Телефон";
-            this.tELDataGridViewTextBoxColumn.Name = "tELDataGridViewTextBoxColumn";
+            this.tOVARYTableAdapter.ClearBeforeFill = true;
+            // 
+            // rASXODTableAdapter
+            // 
+            this.rASXODTableAdapter.ClearBeforeFill = true;
+            // 
+            // pOKRASHBindingSource
+            // 
+            this.pOKRASHBindingSource.DataMember = "POK_RASH";
+            this.pOKRASHBindingSource.DataSource = this.pOKUPATELIBindingSource;
+            // 
+            // btnProc
+            // 
+            this.btnProc.Location = new System.Drawing.Point(647, 141);
+            this.btnProc.Name = "btnProc";
+            this.btnProc.Size = new System.Drawing.Size(123, 28);
+            this.btnProc.TabIndex = 4;
+            this.btnProc.Text = "Вызвать процедуру";
+            this.btnProc.UseVisualStyleBackColor = true;
+            this.btnProc.Click += new System.EventHandler(this.btnProc_Click);
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblResult.Location = new System.Drawing.Point(613, 186);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(176, 20);
+            this.lblResult.TabIndex = 5;
+            this.lblResult.Text = "Результат процедуры";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 454);
+            this.Controls.Add(this.lblResult);
+            this.Controls.Add(this.btnProc);
             this.Controls.Add(this.dgvRasxod);
             this.Controls.Add(this.dgvTovar);
             this.Controls.Add(this.dgvPokup);
@@ -410,8 +435,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTovar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tOVARYBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRasxod)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tOVRASHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rASXODBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tOVRASHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pOKRASHBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -459,6 +484,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gORODDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aDRESDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tELDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnProc;
+        private System.Windows.Forms.Label lblResult;
     }
 }
 
