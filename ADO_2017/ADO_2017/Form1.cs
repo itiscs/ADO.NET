@@ -96,5 +96,11 @@ namespace ADO_2017
         {
 
         }
+
+        private void альтернативнаяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AltForm f1 = new AltForm();
+            f1.ShowDialog();
+        }
     }
 }

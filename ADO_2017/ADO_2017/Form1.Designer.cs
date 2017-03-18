@@ -71,6 +71,11 @@
             this.pOKRASHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnProc = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.формыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.основнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.альтернативнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.задачиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pOKUPATELIBindingSource)).BeginInit();
@@ -82,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rASXODBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tOVRASHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pOKRASHBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bindingNavigator1
@@ -102,7 +108,7 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 24);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -218,7 +224,7 @@
             this.aDRESDataGridViewTextBoxColumn,
             this.tELDataGridViewTextBoxColumn});
             this.dgvPokup.DataSource = this.pOKUPATELIBindingSource;
-            this.dgvPokup.Location = new System.Drawing.Point(0, 28);
+            this.dgvPokup.Location = new System.Drawing.Point(0, 52);
             this.dgvPokup.Name = "dgvPokup";
             this.dgvPokup.Size = new System.Drawing.Size(575, 107);
             this.dgvPokup.TabIndex = 1;
@@ -259,7 +265,7 @@
             this.zENADataGridViewTextBoxColumn,
             this.cOUNTTOVDataGridViewTextBoxColumn});
             this.dgvTovar.DataSource = this.tOVARYBindingSource;
-            this.dgvTovar.Location = new System.Drawing.Point(0, 141);
+            this.dgvTovar.Location = new System.Drawing.Point(0, 165);
             this.dgvTovar.Name = "dgvTovar";
             this.dgvTovar.Size = new System.Drawing.Size(603, 127);
             this.dgvTovar.TabIndex = 2;
@@ -314,7 +320,7 @@
             this.kOLVODataGridViewTextBoxColumn,
             this.sTOIMDataGridViewTextBoxColumn});
             this.dgvRasxod.DataSource = this.rASXODBindingSource;
-            this.dgvRasxod.Location = new System.Drawing.Point(0, 276);
+            this.dgvRasxod.Location = new System.Drawing.Point(0, 300);
             this.dgvRasxod.Name = "dgvRasxod";
             this.dgvRasxod.Size = new System.Drawing.Size(675, 146);
             this.dgvRasxod.TabIndex = 3;
@@ -394,7 +400,7 @@
             // 
             // btnProc
             // 
-            this.btnProc.Location = new System.Drawing.Point(647, 141);
+            this.btnProc.Location = new System.Drawing.Point(647, 165);
             this.btnProc.Name = "btnProc";
             this.btnProc.Size = new System.Drawing.Size(123, 28);
             this.btnProc.TabIndex = 4;
@@ -406,11 +412,50 @@
             // 
             this.lblResult.AutoSize = true;
             this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblResult.Location = new System.Drawing.Point(613, 186);
+            this.lblResult.Location = new System.Drawing.Point(613, 210);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(176, 20);
             this.lblResult.TabIndex = 5;
             this.lblResult.Text = "Результат процедуры";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.формыToolStripMenuItem,
+            this.задачиToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(801, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // формыToolStripMenuItem
+            // 
+            this.формыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.основнаяToolStripMenuItem,
+            this.альтернативнаяToolStripMenuItem});
+            this.формыToolStripMenuItem.Name = "формыToolStripMenuItem";
+            this.формыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.формыToolStripMenuItem.Text = "Формы";
+            // 
+            // основнаяToolStripMenuItem
+            // 
+            this.основнаяToolStripMenuItem.Name = "основнаяToolStripMenuItem";
+            this.основнаяToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.основнаяToolStripMenuItem.Text = "Основная";
+            // 
+            // альтернативнаяToolStripMenuItem
+            // 
+            this.альтернативнаяToolStripMenuItem.Name = "альтернативнаяToolStripMenuItem";
+            this.альтернативнаяToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.альтернативнаяToolStripMenuItem.Text = "Альтернативная";
+            this.альтернативнаяToolStripMenuItem.Click += new System.EventHandler(this.альтернативнаяToolStripMenuItem_Click);
+            // 
+            // задачиToolStripMenuItem
+            // 
+            this.задачиToolStripMenuItem.Name = "задачиToolStripMenuItem";
+            this.задачиToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.задачиToolStripMenuItem.Text = "Задачи";
             // 
             // Form1
             // 
@@ -423,6 +468,8 @@
             this.Controls.Add(this.dgvTovar);
             this.Controls.Add(this.dgvPokup);
             this.Controls.Add(this.bindingNavigator1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -438,6 +485,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.rASXODBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tOVRASHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pOKRASHBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,6 +535,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tELDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnProc;
         private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem формыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem основнаяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem альтернативнаяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem задачиToolStripMenuItem;
     }
 }
 
