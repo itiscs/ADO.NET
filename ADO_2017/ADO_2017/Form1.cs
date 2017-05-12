@@ -102,5 +102,24 @@ namespace ADO_2017
             AltForm f1 = new AltForm();
             f1.ShowDialog();
         }
+
+        private void вариант1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Zadacha1_v1 f = new Zadacha1_v1();
+            f.ShowDialog();
+        }
+
+        private void вариант2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Zadacha1_v2 f = new Zadacha1_v2();
+            f.ShowDialog();
+
+        }
+
+        private void товарыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NavigForm f = new NavigForm();
+            f.ShowDialog();
+        }
     }
 }
